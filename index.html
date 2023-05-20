@@ -10,11 +10,13 @@
   <!-- Header section -->
   <header>
     <h1>Vehicle Dynamics Calculator</h1>
+    <h3>Please scroll to the bottom for the answers.</h3>
   </header>
 
   <!-- Acceleration section -->
   <section>
     <h2>Acceleration Calculation</h2>
+    <p>Force required (N) = weight (kg) * acceleration (m/s^2)</p>
     <div>
       <label for="vehicle-weight">Vehicle Weight (kg):</label>
       <input type="number" id="vehicle-weight">
@@ -29,6 +31,7 @@
   <!-- Braking distance section -->
   <section>
     <h2>Braking Distance Calculation</h2>
+    <p>brakingDistance (m) = (initialSpeed (m/s) ** 2) / (2 * brakingForce (N));</p>
     <div>
       <label for="initial-speed">Initial Speed (km/h):</label>
       <input type="number" id="initial-speed">
@@ -43,6 +46,9 @@
   <!-- Cornering force section -->
 <section>
     <h2>Cornering Force Calculation</h2>
+    <p>corneringForce = (weight * (initialSpeedMps ** 2)) / (corneringRadius * tireCoefficient)</p>
+    <a href="http://hpwizard.com/tire-friction-coefficient.html" target="_blank">Link to Tire Friction & Rolling Coefficients</a>
+    <p></p>
     <div>
       <label for="tire-coefficient">Tire Coefficient:</label>
       <input type="number" id="tire-coefficient">
@@ -102,6 +108,7 @@
     <div id="result-output"></div>
   </section>
 
+  <!-- Linking to the Javascript -->
   <script src="script.js"></script>
 </body>
 </html>

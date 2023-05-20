@@ -1,10 +1,13 @@
 // Get input elements
 const weightInput = document.getElementById('vehicle-weight');
 const accelerationInput = document.getElementById('acceleration');
+
 const initialSpeedInput = document.getElementById('initial-speed');
 const brakingForceInput = document.getElementById('braking-force');
+
 const calculateAccelerationBtn = document.getElementById('calculate-acceleration-btn');
 const calculateBrakingDistanceBtn = document.getElementById('calculate-braking-distance-btn');
+
 const resultOutput = document.getElementById('result-output');
 
 // Add event listeners to the calculate buttons
@@ -15,6 +18,12 @@ function calculateAcceleration() {
   // Get user input values
   const weight = parseFloat(weightInput.value);
   const acceleration = parseFloat(accelerationInput.value);
+
+  // Validate input values
+  if (isNaN(weight) || isNaN(acceleration) ) {
+    resultOutput.textContent = 'Please enter valid values.';
+    return;
+  }
 
   // Perform acceleration calculation
   const force = weight * acceleration;
@@ -131,4 +140,5 @@ function calculateCorneringForce() {
     // Display the result
     resultOutput.textContent = result;
   }
+
   
